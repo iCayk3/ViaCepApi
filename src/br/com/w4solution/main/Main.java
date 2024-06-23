@@ -1,12 +1,7 @@
 package br.com.w4solution.main;
 
-import br.com.w4solution.main.modelos.Cep;
 import br.com.w4solution.main.servicos.SalvarFormatoJson;
 import br.com.w4solution.main.servicos.ViaCepAPI;
-import com.google.gson.FieldNamingPolicy;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 import java.io.IOException;
 import java.util.Scanner;
 
