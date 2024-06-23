@@ -1,0 +1,12 @@
+{
+  "cep": "66025-660",
+  "logradouro": "Rua dos Mundurucus",
+  "complemento": "até 759/760",
+  "bairro": "Jurunas",
+  "localidade": "Belém",
+  "uf": "PA",
+  "ibge": "1501402",
+  "gia": "",
+  "ddd": "91",
+  "siafi": "0427"
+}
