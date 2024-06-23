@@ -1,5 +1,6 @@
 package br.com.w4solution.main.servicos;
 
+import br.com.w4solution.main.exceptions.CepNaoExisteException;
 import br.com.w4solution.main.modelos.Cep;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
@@ -38,10 +39,12 @@ public class ViaCepAPI {
             System.out.println("Requisicao invalida");
             System.out.println("Erro codigo: " + response.statusCode());
             return null;
-        }else {
+        } else {
             var json = response.body();
-            Cep ModelCep = gson.fromJson(json, Cep.class);
-            return ModelCep;
+            if(json.contains("\"erro\": \"true\"")){
+                throw new CepNaoExisteException("Cep nao existe!");
+            }
+            return gson.fromJson(json, Cep.class);
         }
     }
 }
